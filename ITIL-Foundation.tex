@@ -140,10 +140,10 @@ Alle ressourcer kan måles på en eller anden facon.
 
 Capabilities er ikke håndgribelige som Ressourcer. Processer i diagrammet, evnen til at følge processer. Capabilities styrer og koordinerer ressourcer gennem processer.
 
+Sammenhængen mellem capability og ressourcer, er den evne man har til at udnytte resourcer.
+
 \subsection{Procesmodellen}
 Der er altid noget der trigger en proces.
-
--Check op på raki matricen.
 
 Så snart man har klarlagt/tegnet processen vil man kunne finde målepunkter.
 
@@ -262,7 +262,7 @@ Cost benefit vurdering af krav.
 \subsection{Business Relationship management}
 Strategisk: mulighed for mersalg, både eksternt til kunder men også til internt brug. Dette giver øget mersalg og effektivitet internt men viser sig også eksternt. Vær tæt på forretningen. (business relationship manager med produkt katalog)
 
-Taktisk: er mere en SDM, Service Level manager. 
+Taktisk: er mere en SDM, ikke ITIL, Service Level manager. service ejer. Håndtere SLA'er med kunden.
 
 Operationelt: Service desk, direkte kontakt.
 
@@ -301,10 +301,12 @@ I design fasen laves der kontrakter på samme måde som i service strategy laves
 
 De 4 p'er (People, processes, product, partners) skal indgå i designfasen.
 
+Designer politikker og retningslinier for service, se process for itil.
+
 Hovedaspekter af service design
 \begin{itemize}
 \item Serviceløsninger (Holistisk se overordnet på outcome)
-\item Management information systemer - portfolio ()
+\item Management information systemer - portfolio (Portfolio)
 \item Teknologi (server/klient, data arkitektur, produkt arkitektur, monitorering)
 \item Processer (Skal nuværende processer udvides, kun ITIL)
 \item Målesystemer (SLA og OLA skal der måles efter om opfyldes)
@@ -328,6 +330,76 @@ Service arkitektur går ud på at anskueliggøre over for kunden, de offerings s
 \end{itemize}
 
 
+\subsection{RACI matricen}
+En RACI matrice definerer ansvar i en process. Kolonner er roller, rækker er aktiviteter i processen.
+\begin{itemize}
+\item Accountable - Man har det overordnede ansvar for at ting tager sted.
+\item Responsible -  Dem der skal udføre selve opgaverne. (Proces praktikere)
+\item Consulted - Man bør stå til rådighed for konsultering om sagen.
+\item Informed - Modtager kun informationer, man håndterer afvigelser i denne rolle.
+\end{itemize}
+
+\subsection{kompetencer og evner}
+SFIA, skills framework for the information age kan bruges til at definere capabilities i en organisation.
+
+\subsection{Service design processer}
+Der designes en service med fokus på warranty elementer, som der findes processer for at designe.
+
+\subsubsection{Service level management}
+Kunden der definerer, burde være os.
+
+\subsubsection{Capacity management}
+
+
+\subsubsection{Information security management}
+
+\subsubsection{Supplier management}
+Leverandør kontrakter.
+
+\subsubsection{Design coordination}
+Sikrer at hvert service design fasen går i den rigtige retning. Hvordan er designpolitiken, planlægge på tværs af afdelinger (portfolio management). For hvert enkelt design koordinerer man individuelle design til overlevering til transition fasen.
+
+\subsubsection{Service catlog management}
+Service portfolio management er den overordnede process, som styrer servcies i pipeline og i udfasning. SPM leverer input til service catalog management som består i at beskrive services der er i produktion. Skal vedligeholde en kilde til eksisterende og kommende operationelle services. Man kan godt inkludere servcies i udfasning. Denne fase har stor grænseflade med service level management.
+
+Configuration items er det samme som service assets. SCM skal sikrer at grænseflader ned til CI er definerede. Alle komponenter bliver benævnt configuration items.
+
+For hver relation mellem kunde og service i service kataloget er der en SLA.
+
+Service katalog: Set fra services udbudt kunder.
+
+Teknisk service katalog: Set fra de enkelte komponenter.
+
+\subsubsection{Service level management}
+Aftale mellem kunde og it-leverandør -> SLA. SLA er en gensidig aftale. Udarbejdelse af aftaler og sørge for at aftalerne bliver overholdt. 
+
+Forventningsafstemning via kundemøder. Proaktive handliner der sørger for at tilfredsstille kundens behov.
+
+Aftaler med kunden skrives i kundesprog.
+
+OLA laves internt i it-organisationen, som skal understøtte at SLA kan gennemføres. OLA er typisk skrevet i teknisk/internt sprog.
+
+Taktisk niveau med business relationship management.
+
+Service level requirements, de service krav som kunden måtte have, forud for SLA'er. SLR bliver konverteret til Service level targets (SLT) som skrives ind i SLA efter evt. modifikation.
+
+Der måles på SLA'er og evt. forbedringer iværksættes.
+
+SLA har til formål at forbedre service. Definition af mål som burde kunne forandres.
+
+Kontrakt har til formål at definere klare mål som skal overholdes. Jura.
+
+SLA og kontrakt bør ikke blandes sammen.
+
+Mange interfaces til forskellig dele af ITIL. Supplier management, styr på kontrakter mellem it-org. og kunde.
+
+\begin{itemize}
+\item Service baseret SLA - een sla man giver til alle kunder. Sparer vedligeholdelse.
+\item Kundebaseret SLA - En sla som gælder for alle services en kunde har. Sparer vedligeholdelse.
+\item Multilevel SLA - Introducerer hierarki i SLA, som gør at man kan abstrahere i SLA. Man kan på den måde skabe en abstrakt SLA som gælder corporate, hvor specifikke dele kan implementeres. (Corp, Customer, Service)
+\end{itemize}
+
+\subsubsection{}
 
 
 
@@ -352,14 +424,20 @@ Service arkitektur går ud på at anskueliggøre over for kunden, de offerings s
 
 
 
-\section{Forkortelser}
+\section{Forkortelser / beskrivelser}
 \begin{itemize}
 \item OLA - Operational Level Agreement - Intern aftale som skal støtte op om overholdelse af SLA. Procent oppetid på server, tabte netværkspakker.
-\item SLA - Service Level Agreement - Kontrakt mellem service leverandør og kunde. Utility/Warranty. Svartid på kundehendvendelser, benahdlingstid på ændringsønsker. Kan ændre sig over tid.
+\item SLA - Service Level Agreement - Kontrakt mellem service leverandør og kunde. Utility/Warranty. Svartid på kundehendvendelser, benahdlingstid på ændringsønsker. Kan ændre sig over tid. En samling af SLT'er som er konverteret fra SLR'er.
 \item SAC - Service Acceptance Criteria - Overordnede kriterier som en service skal kunne opfylde i hele levetiden.
-\item SLR - Service Level Requirement - 
+\item SLR - Service Level Requirement - Kundens krav til en service der ligger forud for SLA i transitionsfasen.
 \item SDP - Service Design Package - Den "perfekte" beskrivelse af hvordan service skal implementeres. Perfekt blueprint. Fuldstændig specifikation af alle parametre for service.
+\item SLT - Service level target - Del af en SLA, et enkelt service mål som kommer af en SLR.
 \item RFC - Request For Change
+\item Best Practice
+\item Standard - En process man skal følge slavisk
+\item Rammeværk - En definition af best practices som man kan vælge at følge.
+\item SFIA - skills framework for the information age
+\item SLAM (Chart) - Oversigt over SLA og deres overholdelse
 \end{itemize}
 
 
